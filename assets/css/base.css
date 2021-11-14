@@ -1,3 +1,69 @@
 * {
     font-family: 'Merriweather', serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
 }
+
+/* Styles for navbar */
+
+.nav-container {
+    text-align: center;
+    border: 1px solid black;
+    grid-auto-flow: column;
+    margin: auto;
+    padding-bottom: 10px;
+
+}
+
+.title {
+    padding: 1px;
+    text-decoration: none;
+}
+
+.contact-a {
+    margin-right: 80px;
+    text-decoration: none;
+
+}
+.info-a {
+    margin-left: 80px;
+    text-decoration: none;
+
+}
+
+.contact-a:hover {
+    border-bottom: 1px solid black;
+}
+
+.info-a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+/* Styles for contact.html */
+
+.question-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.form-container {
+    width: 40%;
+    height: 80vh;
+    margin: auto;
+    resize: vertical;
+
+}
+
+input[type=text],[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+ 
+}
+
+
+
