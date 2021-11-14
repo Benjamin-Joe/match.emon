@@ -10,14 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 
-    <title>Match-Emon</title>
+    <title>Match-Emon:Contact</title>
 </head>
 <body>
     <a href="/contact.html">Contact Page</a>
     <a href="/info.html">Infor Page</a>
     <a href="/index.html"><h1>Match-Emon</h1></a>    
     
-    <h1>Testing</h1>
+    <div class="form-container">
+        <h2 class="question-title">Have A Question Or Query</h2>
+        <h3 class="question-title">Get In Touch!</h3>
+        <div class="divide"></div>
+        <form class="contact-form" action="">
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" placeholder="Enter Your Name Here...">
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Enter Email Here...">
+
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message Goes Here..."></textarea>
+
+            <input type="submit" onclick="sendmessage()" value="submit">
+        </form>
+    </div>
+
     
 
 
