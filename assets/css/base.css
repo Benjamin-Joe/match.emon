@@ -42,6 +42,15 @@
     border-bottom: 1px solid black;
 }
 
+/* Game playing area */
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(5);
+    row-gap: 8px;
+    column-gap: 8px;
+    background-color: yellow;
+}
+
 
 /* Styles for contact.html */
 
