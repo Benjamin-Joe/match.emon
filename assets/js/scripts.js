@@ -115,4 +115,21 @@ var cardList = [
         name: 'sobble',
         image: './assets/images/sobble.png'
     },
-]
+];
+
+/*
+IMPORTANT! Test Code Below Before moving on
+*/
+
+function warningClock(seconds){
+    if(seconds >= 5){
+        timer.innerText =`00:${seconds}`;
+    }else{
+        timer.innerText =`00:${seconds}`;
+
+        if(timer.style.color !='red'){
+            timer.style.color = 'red';
+        }
+    }
+}
+

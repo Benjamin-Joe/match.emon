@@ -43,12 +43,19 @@
 }
 
 /* Game playing area */
+
 #game-grid {
     display: grid;
     grid-template-columns: repeat(5);
     row-gap: 8px;
     column-gap: 8px;
+    width: 80%;
     background-color: yellow;
+    margin: auto;
+}
+
+.image {
+    width: 10%;
 }
 
 
