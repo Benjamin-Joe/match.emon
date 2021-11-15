@@ -26,22 +26,13 @@ These languages work well together and have enabled me to create what I think it
 Above are links to my website and links to pages that have checked my code for any possible errors or issues, the results for each check are in the links.
 
 # The Build
-This was a fun project to build and I decided to break it down into sections to show you how I did things.  
-To begin I created all the files and folders I needed and added any images. Then I connected up all files and checked to make sure everything was linked up successfully.  
-Then I created the base for the website, including basic html and css. Just to have the items I would need visible. This helped as it gave me a visual of how things were shaping up.  
- <img src="./assets/images/readme-images/first-image.png" alt="Image of website template">  
- The website if broken up into three pages:  
- Homepage (Match-Emon) |  Contact Page | Info Page  
- By having a contact page, I am able to receive feedback from users. This allows me to listen to user wants/needs whilst also letting people reach out to me if they find a problem or have any ideas on how to improve the site. Below is an image of my first draft of the contact page. Although it's basic, it is functional, and my priorities with coding are always functionality first, looks second!  
- <img src="./assets/images/readme-images/contact-first.png" alt="Image of contact page">  
 
 
  # Wireframes
 Creating wireframes is a very important step as is helps me to create a visual representation of where I am aiming to go. This allows me to stay focused on the task ahead and not get sidetracked on the smaller things.  
 
 # Functionality
-This is my first official project where my main focus is JavaScript. It has been a challenge but, I enjoyed the experience. Initially I did not know where to start. So I decided to focus on the timer function as it seemed fairly simple and the rest of the game would work around it. 
-    <img src="./assets/images/readme-images/timer-function.png" alt=">Image of timer function">  
+This is my first official project where my main focus is JavaScript. It has been a challenge but, I enjoyed the experience. Below are a tests I used to keep track of how things were moving during the build.
 Once I had added the images to the scripts.js file, I felt I should make sure they show up, so I called the images to show in the console.  
  <img src="./assets/images/readme-images/images-test.png" alt="Images showing in the console">  
  Then I added a shuffle function to randomly shuffle the images(playing cards) when click here to play button is clicked. I had it show in the terminal to make sure it was working correclty.  

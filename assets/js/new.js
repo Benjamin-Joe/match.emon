@@ -5,14 +5,14 @@ var cardFlipped = [];
 var cardTimer = '';
 var gameLock = false;
 var playGame = false;
-var beginButton = document.getElementById('start')
-var gameBoard = document.getElementById('game-grid')
+var beginButton = document.getElementById('start');
+var gameBoard = document.getElementById('game-grid');
 
 // Building the game board
 
 function board(){
     for (var i = 0; i <= (gameArray.length -1); i++){
-        gameBoard.innerHTML += '<div class="game-square">'
+        gameBoard.innerHTML += '<div class="game-square">';
         gameBoard.innerHTML += '<img id="playing-cards' +i+'" src="./assets/images/card-rear/card-rear-image.jpg" onclick="selectCard('+i+', this)" class="flipCard"></div>';
 
     }
@@ -25,7 +25,7 @@ function board(){
 function selectCard(playingCard, info){
      // Check if card is already flipped
      if(!insideArray(info.id, cardFlipped)){
-         console.log('Not already picked ')
+         console.log('Not already picked ');
      }else{
          console.log(' Is already picked ');
      }

@@ -26,7 +26,7 @@
         <h2 class="question-title">Have A Question Or Query</h2>
         <h3 class="question-title">Get In Touch!</h3>
         <div class="divide"></div>
-        <form class="contact-form" action="">
+        <form class="contact-form" action="#"">
             <label for="name">Full Name: </label>
             <input required="True" type="text" id="name" placeholder="Enter Your Name Here...">
 
@@ -36,8 +36,9 @@
             <label for="message">Message: </label>
             <textarea required="True" name="message" id="message" cols="30" rows="10" placeholder="Your Message Goes Here..."></textarea>
 
-            <input type="submit" onclick="sendmessage()" value="submit">
+            <input type="button" onclick="sendmessage()" value="submit">
         </form>
+        <h1 id="message_feedback" class="hide"> Message sent</h1>
     </div>
 
     
@@ -61,6 +62,7 @@ function sendmessage() {
 
         emailjs.send('service_f0oozkd', 'template_0f8b06b', contactParams).then(function() {
             console.log("Message Sent!");
+            document.getElementById('message_feedback').classList.remove('hide');
         }, function(error) {
             console.log("Something Went Wrong!", error);
         });
