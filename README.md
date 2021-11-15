@@ -43,7 +43,7 @@ Creating wireframes is a very important step as is helps me to create a visual r
 This is my first official project where my main focus is JavaScript. It has been a challenge but, I enjoyed the experience. Initially I did not know where to start. So I decided to focus on the timer function as it seemed fairly simple and the rest of the game would work around it. 
     <img src="./assets/images/readme-images/timer-function.png" alt=">Image of timer function">  
 Once I had added the images to the scripts.js file, I felt I should make sure they show up, so I called the images to show in the console.  
- <img src="./assets/images/readme-images/images-console.png" alt="Images showing in the console">
+ <img src="./assets/images/readme-images/images-test.png" alt="Images showing in the console">
 
  
 # Styles
