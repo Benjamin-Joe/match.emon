@@ -77,22 +77,36 @@
 
 .question-title {
     text-align: center;
-    margin-top: 10px;
+
     margin-bottom: 8px;
 }
 
 .form-container {
-    width: 40%;
-    height: 80vh;
-    margin: auto;
-    resize: vertical;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 2vh auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 15px rgb(51, 92, 180);
+
 
 }
 
 input[type=text],[type=email], textarea {
     width: 100%;
     padding: 12px;
+    background-color: white;
  
+}
+
+#contact-button {
+    color: white;
+    background-color: blue;
+    width: 100%;
 }
 
 
