@@ -16,14 +16,19 @@ var counter = document.getElementById('moves');
 
 var cardList = [
     {
+        id: 0,
+        name: 'articuna',
+        image: './assets/images/articuna.png'
+    },
+    {
         id: 1,
         name: 'articuna',
         image: './assets/images/articuna.png'
     },
     {
         id: 2,
-        name: 'articuna',
-        image: './assets/images/articuna.png'
+        name: 'ash-pikachu',
+        image: './assets/images/ash-pikachu.png'
     },
     {
         id: 3,
@@ -32,8 +37,8 @@ var cardList = [
     },
     {
         id: 4,
-        name: 'ash-pikachu',
-        image: './assets/images/ash-pikachu.png'
+        name: 'charizard',
+        image: './assets/images/charizard.png'
     },
     {
         id: 5,
@@ -42,8 +47,8 @@ var cardList = [
     },
     {
         id: 6,
-        name: 'charizard',
-        image: './assets/images/charizard.png'
+        name: 'charmander',
+        image: './assets/images/charmander.png'
     },
     {
         id: 7,
@@ -52,8 +57,8 @@ var cardList = [
     },
     {
         id: 8,
-        name: 'charmander',
-        image: './assets/images/charmander.png'
+        name: 'jolteon',
+        image: './assets/images/jolteon.png'
     },
     {
         id: 9,
@@ -62,8 +67,8 @@ var cardList = [
     },
     {
         id: 10,
-        name: 'jolteon',
-        image: './assets/images/jolteon.png'
+        name: 'mewtwo',
+        image: './assets/images/mewtwo.png'
     },
     {
         id: 11,
@@ -72,8 +77,8 @@ var cardList = [
     },
     {
         id: 12,
-        name: 'mewtwo',
-        image: './assets/images/mewtwo.png'
+        name: 'munchlax',
+        image: './assets/images/munchlax.png'
     },
     {
         id: 13,
@@ -82,8 +87,8 @@ var cardList = [
     },
     {
         id: 14,
-        name: 'munchlax',
-        image: './assets/images/munchlax.png'
+        name: 'pikachu',
+        image: './assets/images/pikachu.png'
     },
     {
         id: 15,
@@ -92,8 +97,8 @@ var cardList = [
     },
     {
         id: 16,
-        name: 'pikachu',
-        image: './assets/images/pikachu.png'
+        name: 'psyduck',
+        image: './assets/images/psyduck.png'
     },
     {
         id: 17,
@@ -102,16 +107,11 @@ var cardList = [
     },
     {
         id: 18,
-        name: 'psyduck',
-        image: './assets/images/psyduck.png'
-    },
-    {
-        id: 19,
         name: 'sobble',
         image: './assets/images/sobble.png'
     },
     {
-        id: 20,
+        id: 19,
         name: 'sobble',
         image: './assets/images/sobble.png'
     },
@@ -153,5 +153,5 @@ function countdownTimer() {
     }
 }
 
-
+console.log(cardList)
 countdownTimer()
