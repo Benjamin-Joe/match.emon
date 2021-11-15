@@ -5,6 +5,7 @@ var cardFlipped = [];
 var cardTimer = '';
 var gameLock = false;
 var playGame = false;
+var messages = document.getElementById('messages')
 var beginButton = document.getElementById('start');
 var gameBoard = document.getElementById('game-grid');
 
@@ -35,17 +36,17 @@ function selectCard(playingCard, info){
 
             info.src = "./assets/images/"+gameArray[playingCard];
             cardFlipped.push(info.id);
-            var secondCard = playingCard;
+            var playingCard = playingCard;
             gameLock = true;
             if(checkimages(cardFlipped[cardFlipped.length-1]) == checkimages(cardFlipped[cardFlipped.length-2])){
                 //Does Match
-                console.log('It is a match');
+                messages.innerHTML = "Yaay It's A Match :)"
                 gameLock = false;
                 isCardFlipped = -1;
             }else {
                 // Doesn't match
-                console.log('not a match');
-                cardTimer = setInterval(hideCard, 4000);
+                messages.innerHTML = "Not A Match Pick Again :)"
+                cardTimer = setInterval(hideCard, 1000);
             }
             // Check for match
 
@@ -104,6 +105,7 @@ function startGame(){
         gameArray = gameImages.concat(gameImages);
         shuffle(gameArray);
         board();
+        messages.innerHTML = "Chose A Card"
 
     }
 
@@ -123,4 +125,5 @@ function shuffle(array){
     }
     return array;
 }
+
 

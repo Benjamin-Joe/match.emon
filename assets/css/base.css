@@ -45,16 +45,15 @@
 /* Game playing area */
 
 #game-grid {
-
-    grid-template-columns: repeat(5);
     row-gap: 8px;
     column-gap: 8px;
-    width: 80%;
+    width: 800px;
     background-color: yellow;
     margin: auto;
 }
 .flipCard {
-    width: 10%;
+    width: 120px;
+    height: 120px;
 }
 
 .game-square {
@@ -68,16 +67,12 @@
     font-size: 2em;
 }
 
-.image {
-    width: 10%;
-}
 
 
 /* Styles for contact.html */
 
 .question-title {
     text-align: center;
-
     margin-bottom: 8px;
 }
 
