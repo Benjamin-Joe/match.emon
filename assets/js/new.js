@@ -32,6 +32,13 @@ function selectCard(playingCard, info){
             info.src = "./assets/images/"+gameArray[playingCard];
             cardFlipped.push(info.id);
             var secondCard = playingCard;
+            if(cardFlipped[cardFlipped.length-1] == cardFlipped[cardFlipped.length-2]){
+                //Does Match
+                console.log('It is a match');
+            }else {
+                // Doesn't match
+                console.log('not a match');
+            }
             // Check for match
 
         }
