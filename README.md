@@ -43,7 +43,11 @@ Creating wireframes is a very important step as is helps me to create a visual r
 This is my first official project where my main focus is JavaScript. It has been a challenge but, I enjoyed the experience. Initially I did not know where to start. So I decided to focus on the timer function as it seemed fairly simple and the rest of the game would work around it. 
     <img src="./assets/images/readme-images/timer-function.png" alt=">Image of timer function">  
 Once I had added the images to the scripts.js file, I felt I should make sure they show up, so I called the images to show in the console.  
- <img src="./assets/images/readme-images/images-test.png" alt="Images showing in the console">
+ <img src="./assets/images/readme-images/images-test.png" alt="Images showing in the console">  
+ Then I added a shuffle function to randomly shuffle the images(playing cards) when click here to play button is clicked. I had it show in the terminal to make sure it was working correclty.  
+ <img src="./assets/images/readme-images/shuffle.png" alt="Shuffle function in console">  
+ Then I created a board function and added the rear card image to each playing card and printed them to the board.  
+ 
 
  
 # Styles
