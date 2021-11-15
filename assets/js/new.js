@@ -37,7 +37,7 @@ function selectCard(playingCard, info){
             cardFlipped.push(info.id);
             var secondCard = playingCard;
             gameLock = true;
-            if(cardFlipped[cardFlipped.length-1] == cardFlipped[cardFlipped.length-2]){
+            if(checkimages(cardFlipped[cardFlipped.length-1]) == checkimages(cardFlipped[cardFlipped.length-2])){
                 //Does Match
                 console.log('It is a match');
                 gameLock = false;
@@ -58,6 +58,12 @@ function selectCard(playingCard, info){
         cardFlipped.push(info.id);
     }
 
+}
+
+// Function for keeping matched cards turned over
+function checkimages(values){
+    var values = document.getElementById(values).src ;
+    return values;
 }
 
 
