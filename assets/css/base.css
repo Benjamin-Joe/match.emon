@@ -53,6 +53,10 @@
     background-color: yellow;
     margin: auto;
 }
+#timer {
+    color: black;
+    font-size: 2em;
+}
 
 .image {
     width: 10%;

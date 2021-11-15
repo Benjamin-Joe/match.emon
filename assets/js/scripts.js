@@ -131,5 +131,27 @@ function warningClock(seconds){
             timer.style.color = 'red';
         }
     }
+};
+
+function countdownTimer() {
+    countdown--;
+    if(countdown > 0 && cardList.length > 0){
+        warningClock(countdown);
+    } else
+    if(countdown <= 0 && cardList.length > 0){
+        let gameOver1 = '00:00';
+        timer.innerText = gameOver1;
+        timer.style.color = 'red';
+
+        winOrLose.innerText = `HaHa, You Lose!`;
+        winOrLose.style.coloe = 'red';
+    } else {
+        timer.style.display = 'none';
+
+        winOrLose.innerText = `Yaay! You Win!!`;
+        winOrLose.style.color = 'blue';
+    }
 }
 
+
+countdownTimer()
