@@ -126,4 +126,6 @@ function shuffle(array){
     return array;
 }
 
+// Nav bar burger bar
+
 
