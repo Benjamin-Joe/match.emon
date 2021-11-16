@@ -112,6 +112,32 @@ input[type=text],[type=email], textarea {
 
 /* New Navbar */
 
-.test {
-    background-color: blue;
+#main-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+ul li {
+    margin-left: 12px;
+    padding: 8px;
 }
