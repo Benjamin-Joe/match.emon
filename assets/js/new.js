@@ -128,4 +128,11 @@ function shuffle(array){
 
 // Nav bar burger bar
 
-
+function toggleNav() {
+    var x = document.getElementById("navRes");
+    if(x.className === "nav-response") {
+        x.className += "responsive";
+    }else {
+        x.className = "nav-response";
+    }
+}
