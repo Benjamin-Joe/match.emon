@@ -5,9 +5,17 @@ var cardFlipped = [];
 var cardTimer = '';
 var gameLock = false;
 var playGame = false;
-var messages = document.getElementById('messages')
+var messages = document.getElementById('messages');
 var beginButton = document.getElementById('start');
 var gameBoard = document.getElementById('game-grid');
+
+var countdown = document.getElementById('time-countdown');
+var moves = document.getElementById('moves');
+
+// Countdown timer function
+
+
+
 
 // Building the game board
 
