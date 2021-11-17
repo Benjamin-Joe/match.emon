@@ -84,6 +84,7 @@
     margin: auto;
     text-align: center;
 }
+
 .flipCard {
     width: 120px;
     height: 120px;
@@ -107,6 +108,7 @@
     height: 80vh;
 }
 
+
 .game-rules {
     position: absolute;
     top: 50%;
@@ -120,12 +122,15 @@
     font-weight:300;
     text-align:center;
     transition: all 0.2s;
+    background-color: rgb(184, 184, 253);
+
 }
 
 .game-rules:hover {
-    color:#000000;
-    background-color:#FFFFFF;
+    background-color: rgb(103, 103, 236);
     cursor: pointer;
+    font-weight: bold;
+    border: 5px solid rgb(103, 103, 236);
 }
 
 #moves {
@@ -147,11 +152,23 @@
 
 #start {
     margin: auto;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
 /* Media queries for game area */
+
+@media screen and (max-width: 600px){ 
+    .game-cover {
+        width: 80%;
+    }
+
+    #start {
+        font-size: 15px;
+    }
+}
+
+
 
 
 

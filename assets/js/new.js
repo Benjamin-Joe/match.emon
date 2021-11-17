@@ -1,3 +1,23 @@
+/* 
+ Keys:
+ gameLock = Ability to lock the play and disable / enable users from selecting cards
+ gameBoady = Calling and creating the board for the game to take place
+ baginButton = The button the user clicks to begin the game
+ messagaes = Messages that appear and tell the user if they have a match or not
+ cardTimer = Time that cards stay turned over before unmatched cards back flip back over
+ gameImages = Holds all the images needed for the game
+ isCardFlipped = Turning over a card
+ cardFlipped = checking if card is already turned over or not
+ gameArray = The array for each individual game
+
+ countdown = 60 second timer for users to complete game within
+ moves = number of flips it takes for a user to complete the game
+
+*/
+
+
+
+// ------------------------------------------------------------------- Game variables
 var gameImages = [];
 var gameArray = [];
 var isCardFlipped = -1;
@@ -12,54 +32,66 @@ var gameBoard = document.getElementById('game-grid');
 var countdown = document.getElementById('time-countdown');
 var moves = document.getElementById('moves');
 
-// Countdown timer function
+// ------------------------------------------------------------------- Event listeners
 
+beginButton.addEventListener('click', startGame);
 
+// --------------------------------------------------------------------- Start function
 
+function startGame(){
+    beginButton.style.display='none';
+    if(!playGame){
+        playGame = true;
+        cardArray();
+        gameArray = gameImages.concat(gameImages);
+        shuffle(gameArray);
+        board();
+        messages.innerHTML = "Chose A Card"
+    }
+}
 
-// Building the game board
+// ------------------------------------------------------------- Building the game board
 
 function board(){
     for (var i = 0; i <= (gameArray.length -1); i++){
         gameBoard.innerHTML += '<div class="game-square">';
         gameBoard.innerHTML += '<img id="playing-cards' +i+'" src="./assets/images/card-rear/card-rear-image.jpg" onclick="selectCard('+i+', this)" class="flipCard"></div>';
-
     }
 }
 
+// Countdown timer function
 
 
-// Selecting Cards
+
+
+
+
+// -------------------------------------------------- Selecting cards and checking if cards match or not
 
 function selectCard(playingCard, info){
      // Check if card is already flipped
      if(!insideArray(info.id, cardFlipped)){
-         console.log('Not already picked ');
      }else{
          console.log(' Is already picked ');
      }
      if(isCardFlipped >= 0){
        // Flipping second card
         if(playingCard != isCardFlipped && !gameLock){
-
             info.src = "./assets/images/"+gameArray[playingCard];
             cardFlipped.push(info.id);
             var playingCard = playingCard;
             gameLock = true;
             if(checkimages(cardFlipped[cardFlipped.length-1]) == checkimages(cardFlipped[cardFlipped.length-2])){
                 //Does Match
-                messages.innerHTML = "Yaay It's A Match :)"
+                messages.innerHTML = "Yaay It's A Match"
                 gameLock = false;
                 isCardFlipped = -1;
             }else {
                 // Doesn't match
-                messages.innerHTML = "Not A Match Pick Again :)"
+                messages.innerHTML = "Not A Match Pick Again"
                 cardTimer = setInterval(hideCard, 1000);
             }
-            // Check for match
-
         }
-
     }else{
         // Flipping first card
         isCardFlipped = playingCard;
@@ -69,14 +101,13 @@ function selectCard(playingCard, info){
 
 }
 
-// Function for keeping matched cards turned over
+// -------------------------------------------------------- Function for keeping matched cards turned over
 function checkimages(values){
     var values = document.getElementById(values).src ;
     return values;
 }
 
-
-// Function for cards turning back over if not a match
+// --------------------------------------------------------- Function for cards turning back over if not a match
 function hideCard(){
     for(var i=0;i<2;i++){
         var hideId = cardFlipped.pop();
@@ -88,13 +119,12 @@ function hideCard(){
     isCardFlipped = -1;
 }
 
-
 function insideArray(value, array){
     return array.indexOf(value) > -1;
 }
 
 
-//  function for game image array
+// -------------------------------------------------------------- function for game image array
 
 function cardArray(){
     for (var i = 1; i < 11; i++){
@@ -102,39 +132,19 @@ function cardArray(){
     }
 }
 
-// Start function
-
-beginButton.addEventListener('click', startGame);
-function startGame(){
-    beginButton.style.display='none';
-    if(!playGame){
-        playGame = true;
-        cardArray();
-        gameArray = gameImages.concat(gameImages);
-        shuffle(gameArray);
-        board();
-        messages.innerHTML = "Chose A Card"
-
-    }
-
-
-}
-
-// Shuffling playing cards
+// --------------------------------------------------------------- Shuffling playing cards
 
 function shuffle(array){
     for(var i = array.length -1; i > 0; i--){
         var container = Math.floor(Math.random() * (i+1) );
-        
         var item = array[i];
         array[i] = array[container];
         array[container] = item;
-
     }
     return array;
 }
 
-// Nav bar burger bar
+//--------------------------------------------------------- Nav bar hamburger icon
 
 function navToggle() {
     var x = document.getElementById("TopNav");
