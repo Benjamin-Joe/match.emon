@@ -155,3 +155,12 @@ function countdownTimer() {
 
 console.log(cardList)
 countdownTimer()
+
+
+var clicker = 0;
+
+function onClick(){
+    clicker += 1;
+    document.getElementsByClassName("")
+}
+

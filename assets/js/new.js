@@ -29,9 +29,9 @@ var messages = document.getElementById('messages');
 var beginButton = document.getElementById('start');
 var gameBoard = document.getElementById('game-grid');
 
-var countdown = document.getElementById('time-countdown');
 var moves = document.getElementById('moves');
-
+let moveCounter = 0;
+let pairCounter = 0;
 // ------------------------------------------------------------------- Event listeners
 
 beginButton.addEventListener('click', startGame);
@@ -59,16 +59,24 @@ function board(){
     }
 }
 
-// Countdown timer function
 
+// Game Over win/lose
 
+function gameOver(){
+    beginButton.style.display = 'block';
+    messages.innerHTML = "You Completed It In ...... Turns Click to play again"
+    playGame = false;
+    gameArray = []
+}
 
-
+// Flip counter  
 
 
 // -------------------------------------------------- Selecting cards and checking if cards match or not
 
 function selectCard(playingCard, info){
+    moveCounter = moveCounter + 1;
+    moves.innerText = 'Moves: ' +  moveCounter.toString();
      // Check if card is already flipped
      if(!insideArray(info.id, cardFlipped)){
      }else{
@@ -83,9 +91,16 @@ function selectCard(playingCard, info){
             gameLock = true;
             if(checkimages(cardFlipped[cardFlipped.length-1]) == checkimages(cardFlipped[cardFlipped.length-2])){
                 //Does Match
+                pairCounter = pairCounter + 1;
                 messages.innerHTML = "Yaay It's A Match"
                 gameLock = false;
                 isCardFlipped = -1;
+                setInterval(function () {
+                    if (pairCounter == 10){
+                        alert("Game over, you win with " + moveCounter.toString() + " moves");
+                    }
+                }, 1500); 
+                
             }else {
                 // Doesn't match
                 messages.innerHTML = "Not A Match Pick Again"
@@ -124,7 +139,7 @@ function insideArray(value, array){
 }
 
 
-// -------------------------------------------------------------- function for game image array
+// -------------------------------------------------------------- Creating the game cards
 
 function cardArray(){
     for (var i = 1; i < 11; i++){
