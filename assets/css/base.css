@@ -6,10 +6,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: whitesmoke;
+    background-color: rgb(224, 209, 209);
 }
 
-/*----------------------------------------Navbar */
+/*-------------------------------------------------Navbar */
 
 .topnav {
     overflow: hidden;
@@ -76,14 +76,13 @@
     border-bottom: 1px solid black;
 }
 
-/*-------------------------------------------- Game playing area */
+/*-------------------------------------------------- Game playing area */
 
 #game-grid {
-    row-gap: 8px;
-    column-gap: 8px;
-    width: 800px;
-    background-color: yellow;
+    width: 700px;
+    background-color: rgb(216, 207, 207);
     margin: auto;
+    text-align: center;
 }
 .flipCard {
     width: 120px;
@@ -96,10 +95,65 @@
     
 }
 
-#timer {
-    color: black;
-    font-size: 2em;
+#game-items {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
+
+.game-cover {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+}
+
+.game-rules {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.game-rules:hover {
+    color:#000000;
+    background-color:#FFFFFF;
+    cursor: pointer;
+}
+
+#moves {
+    font-size: 22px;
+    margin: 10px;
+
+}
+
+#timer {
+    font-size: 22px;
+    margin: 10px;
+
+}
+
+#messages {
+    text-align: center;
+    font-size: 22px;
+}
+
+#start {
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Media queries for game area */
+
+
 
 
 
