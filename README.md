@@ -1,4 +1,4 @@
-# [Match-Emon]()
+# [Match-Emon](https://benjamin-joe.github.io/match.emon/)
 
 <img src="./assets/images/readme-images/start-page.png" alt="Image of home screen">
 <br>
@@ -15,6 +15,7 @@
 6. [Styles](#styles)
 7. [Sources](#sources)
 8. [Issues](#issues)
+9. [Deployment](#deployment)
 
 
 # Overview
@@ -25,7 +26,7 @@ I created this website using three languages:
 
 
 # Links
-[Link To Match-Emon]()  
+[Link To Match-Emon](https://benjamin-joe.github.io/match.emon/)  
 [HTML Checker]()  
 [CSS Checker]()  
 [JSHint]()  
@@ -86,3 +87,6 @@ I encountered many issues while making this game, most of them I was able to fix
 There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  There was also an issue with the hamburger icon, when it is pressed it moves down to the bottom right of the screen, I tried to fix it but could not figure out where I went wrong. I will fix it in a later update, but for now I have left it as it doesn't interfere with the gameplay.
 I would also like to give a special thanks to my mentor Antonio Rodriguez as has been an incredible help to me and gone above and beyond to help me understand issues and explaining things to me in such a way that make perfect sense. Truly the best mentor!
 
+# Deployment  
+Deploying this project was very easy, I went to the github repo containing this project it's named match.emon. I went to settings, selected source section dropdown menu and selected the main branch. The I received the link for the live site  
+ [Match-Emon](https://benjamin-joe.github.io/match.emon/)
