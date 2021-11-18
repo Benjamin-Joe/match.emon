@@ -29,7 +29,7 @@ I created this website using three languages:
 [Link To Match-Emon](https://benjamin-joe.github.io/match.emon/)  
 [HTML Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2F)  
 [CSS Checker](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#warnings)  
-[JSHint]()  
+[JSHint](https://jshint.com/)  
 [Responsinator](https://www.responsinator.com/?url=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2Findex.html)  
 Above are links to my website and links to pages that have checked my code for any possible errors or issues, the results for each check are in the links.
 
@@ -82,8 +82,8 @@ I also want to give credit to the following for the images used in this project:
 [Hannah Hill](https://freepngimg.com/author/hannahhil-5479)  
 
 # Issues  
-I encountered many issues while making this game, most of them I was able to fix or find a way around, others I received a little help with. Unfortunately there is one issue that I wasn't able to solve. It is a big of a game breaking bug and I will be fixing it in the near future. There is a bug when turning over a card, if you click on the same card twice the game will consider it a match. I believe it is because the game can not tell the difference between a match and the same card being chosen twice. I think that the issue lies within the firstCardFlipped function. But I was unable to narrow it down any further with the time I had remaining.  
-There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  There was also an issue with the hamburger icon, when it is pressed it moves down to the bottom right of the screen, I tried to fix it but could not figure out where I went wrong. I will fix it in a later update, but for now I have left it as it doesn't interfere with the gameplay.
+I encountered many issues while making this game, most of them I was able to fix or find a way around, others I received a little help with. Such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to. One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  There was also an issue with the hamburger icon, when it is pressed it moves down to the bottom right of the screen, I tried to fix it but could not figure out where I went wrong. I will fix it in a later update, but for now I have left it as it doesn't interfere with the gameplay.
 I would also like to give a special thanks to my mentor Antonio Rodriguez as has been an incredible help to me and gone above and beyond to help me understand issues and explaining things to me in such a way that make perfect sense. Truly the best mentor!
 
 # Deployment  
+Deploying the project was as follows. Go to repo for this project, go to settings, pages, select main and then save, it deployed within minutes, minus an issue where some of the files wouldn't load but that was down to a typing error when linking all the files together.

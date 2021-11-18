@@ -30,18 +30,20 @@ function startGame(){
         shuffle(gameArray);
         board();
         messages.innerHTML = "Good Luck, The Lower The Score The Better :)";
+        moves.innerText = 'Moves: ' +  moveCounter.toString();
     }
 }
 
 // ------------------------------------------------------------- Play again function
 
 function playAgain(){
+    gameBoard.innerHTML = ' ';
     beginButton.style.display='block';
     moveCounter = 0;
     pairCounter = 0;
-    gameBoard.innerHTML = "";
-    board();
-
+    playGame = false;
+    gameImages = [];
+    //board();
     
 }
 // ------------------------------------------------------------------- Building the game board
@@ -52,8 +54,6 @@ function board(){
         gameBoard.innerHTML += '<img id="playing-cards' +i+'" card-value="'+i+'" src="./assets/images/card-rear/card-rear-image.jpg" onclick="selectCard('+i+', this)" class="flipCard"></div>';
     }
 }
-
-// Game Over win/lose
 
 // -------------------------------------------------- Function for selecting cards
 
@@ -67,9 +67,10 @@ function checkForMatch(firstCard, secondCard){
         return false;
     }
 }
-//-------------------------------------------------------------- Function for turing over cards
+//--------------------------------------------------------------------- Function for turing over cards
 
 function flipCard(card){
+    card.classList.add('flipped');
     var cardValue = card.getAttribute('card-value');
     card.src = "./assets/images/"+gameArray[cardValue];
 }
@@ -77,6 +78,7 @@ function flipCard(card){
 
 function unFlipCard(card){
     card.src = "./assets/images/card-rear/card-rear-image.jpg";
+    card.classList.remove('flipped');
 }
 // -----------------------------------------------------------------Function for matching cards
 
@@ -84,53 +86,58 @@ function cardIsMatched(card){
     return card.classList.contains('matched');
 }
 
+function cardIsFlipped(card){
+    return card.classList.contains('flipped');
+}
+
 //--------------------------------------------------------------- Function for main game mechanics
 
 function selectCard(playingCard, info){
     if ((gameLock == false) && (cardIsMatched(info)== false)){
-        gameLock = true;
-        moveCounter = moveCounter + 1;
-
-        moves.innerText = 'Moves: ' +  moveCounter.toString();
-        if (firstFippledCard==null){
-            firstFippledCard = info;
-            flipCard(firstFippledCard);
-            console.log('I played ' + firstFippledCard.getAttribute('card-value'));
-            gameLock = false;
-        }
-        else{
-            secondFippledCard = info;
-            flipCard(secondFippledCard);
-            console.log('I played ' + secondFippledCard.getAttribute('card-value'));
-            if (checkForMatch(firstFippledCard, secondFippledCard)){
-                pairCounter = pairCounter + 1;
-                firstFippledCard.classList.add('matched');
-                secondFippledCard.classList.add('matched');
-                // Game finished
-                setInterval(function () {
-                if (pairCounter == 10){
-                    messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
-                    playAgain();
-                }
-                   }, 1500); 
+        if (cardIsFlipped(info)== false){
+            gameLock = true;
+            moveCounter = moveCounter + 1;
+            moves.innerText = 'Moves: ' +  moveCounter.toString();
+            if (firstFippledCard==null){
+                firstFippledCard = info;
+                flipCard(firstFippledCard);
+                console.log('I played ' + firstFippledCard.getAttribute('card-value'));
                 gameLock = false;
-                firstFippledCard = null;
-                secondFippledCard = null;
             }
             else{
-                setTimeout(function () {
-                    unFlipCard(firstFippledCard);
-                    unFlipCard(secondFippledCard);
+                secondFippledCard = info;
+                flipCard(secondFippledCard);
+                console.log('I played ' + secondFippledCard.getAttribute('card-value'));
+                if (checkForMatch(firstFippledCard, secondFippledCard)){
+                    pairCounter = pairCounter + 1;
+                    firstFippledCard.classList.add('matched');
+                    secondFippledCard.classList.add('matched');
+                    // Game finished
+                    setInterval(function () {
+                    if (pairCounter == 10){
+                        messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
+                        playAgain();
+                    }
+                    }, 1500); 
                     gameLock = false;
                     firstFippledCard = null;
                     secondFippledCard = null;
-                }, 2000);
-            }   
+                }
+                else{
+                    setTimeout(function () {
+                        unFlipCard(firstFippledCard);
+                        unFlipCard(secondFippledCard);
+                        gameLock = false;
+                        firstFippledCard = null;
+                        secondFippledCard = null;
+                    }, 2000);
+                }   
+            }
         }
     }
 }
 
-// --------------------------------------------------------- Function for hiding cards
+// --------------------------------------------------------------- Function for hiding cards
 function hideCard(){
     for(var i=0;i<2;i++){
         var hideId = cardFlipped.pop();
@@ -147,7 +154,7 @@ function insideArray(value, shuffleArray){
 }
 
 
-// -------------------------------------------------------------- Creating the game cards
+// --------------------------------------------------------------------- Creating the game cards
 
 function cardArray(){
     for (var i = 1; i < 11; i++){
@@ -155,7 +162,7 @@ function cardArray(){
     }
 }
 
-// --------------------------------------------------------------- Shuffling playing cards
+// ------------------------------------------------------------------------ Shuffling playing cards
 
 function shuffle(shuffleArray){
     for(var i = shuffleArray.length -1; i > 0; i--){
@@ -167,7 +174,7 @@ function shuffle(shuffleArray){
     return shuffleArray;
 }
 
-//--------------------------------------------------------- Nav bar hamburger icon
+//------------------------------------------------------------------- Nav bar hamburger icon
 
 function navToggle() {
     var x = document.getElementById("TopNav");
@@ -176,27 +183,4 @@ function navToggle() {
     }else {
         x.className = "topnav";
     }
-}
-
-(function() {
-    emailjs.init("user_HQmS8u0JRoHbxdsraJ3sJ");
-})();
-
-function sendmessage() {
-    let fullname = document.getElementById("name").value;
-    let useremail = document.getElementById("email").value;
-    let usermessage = document.getElementById("message").value;
-
-        var contactParams = {
-            from_name: fullname,
-            from_email: useremail,
-            message: usermessage,
-        };
-
-        emailjs.send('service_f0oozkd', 'template_0f8b06b', contactParams).then(function() {
-            console.log("Message Sent!");
-            document.getElementById('message_feedback').classList.remove('hide');
-        }, function(error) {
-            console.log("Something Went Wrong!", error);
-        });
 }

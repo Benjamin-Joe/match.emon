@@ -42,6 +42,30 @@
     
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="assets/js/new.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_HQmS8u0JRoHbxdsraJ3sJ");
+        })();
+        
+        function sendmessage() {
+            let fullname = document.getElementById("name").value;
+            let useremail = document.getElementById("email").value;
+            let usermessage = document.getElementById("message").value;
+        
+                var contactParams = {
+                    from_name: fullname,
+                    from_email: useremail,
+                    message: usermessage,
+                };
+        
+                emailjs.send('service_f0oozkd', 'template_0f8b06b', contactParams).then(function() {
+                    console.log("Message Sent!");
+                    document.getElementById('message_feedback').classList.remove('hide');
+                }, function(error) {
+                    console.log("Something Went Wrong!", error);
+                });
+        }
+</script>
     <script src="https://kit.fontawesome.com/fb3ce16b7a.js" crossorigin="anonymous"></script>
 </body>
 </html>
