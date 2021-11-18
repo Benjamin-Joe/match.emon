@@ -1,20 +1,3 @@
-/* 
- Keys:
- gameLock = Ability to lock the play and disable / enable users from selecting cards
- gameBoady = Calling and creating the board for the game to take place
- baginButton = The button the user clicks to begin the game
- messagaes = Messages that appear and tell the user if they have a match or not
- cardTimer = Time that cards stay turned over before unmatched cards back flip back over
- gameImages = Holds all the images needed for the game
- isCardFlipped = Turning over a card
- cardFlipped = checking if card is already turned over or not
- gameArray = The array for each individual game
- moves = number of flips it takes for a user to complete the game
- shuffleArray = array to shuffle the cards
-*/
-
-
-
 // ------------------------------------------------------------------- Game variables
 var gameImages = [];
 var gameArray = [];
@@ -26,11 +9,11 @@ var playGame = false;
 var messages = document.getElementById('messages');
 var beginButton = document.getElementById('start');
 var gameBoard = document.getElementById('game-grid');
-let firstFippledCard = null;
-let secondFippledCard = null;
+var firstFippledCard = null;
+var secondFippledCard = null;
 var moves = document.getElementById('moves');
-let moveCounter = 0;
-let pairCounter = 0;
+var moveCounter = 0;
+var pairCounter = 0;
 // ------------------------------------------------------------------- Event listener for starting the game
 
 beginButton.addEventListener('click', startGame);
@@ -46,7 +29,7 @@ function startGame(){
         gameArray = gameImages.concat(gameImages);
         shuffle(gameArray);
         board();
-        messages.innerHTML = "Choose A Card"
+        messages.innerHTML = "Choose A Card";
     }
 }
 
@@ -55,12 +38,10 @@ function startGame(){
 function playAgain(){
     beginButton.style.display='block';
  
-    board()
+    board();
     
 }
-
-// ------------------------------------------------------------- Building the game board
-
+// ------------------------------------------------------------------- Building the game board
 
 function board(){
     for (var i = 0; i <= (gameArray.length -1); i++){
@@ -69,14 +50,13 @@ function board(){
     }
 }
 
-
 // Game Over win/lose
 
-// -------------------------------------------------- Selecting cards and checking if cards match or not
+// -------------------------------------------------- Function for selecting cards
 
 function checkForMatch(firstCard, secondCard){
-    const firstValue = firstCard.getAttribute('src');
-    const secondValue = secondCard.getAttribute('src');
+    var firstValue = firstCard.getAttribute('src');
+    var secondValue = secondCard.getAttribute('src');
     if (firstValue == secondValue){
         return true;
     }
@@ -84,19 +64,24 @@ function checkForMatch(firstCard, secondCard){
         return false;
     }
 }
+//-------------------------------------------------------------- Function for turing over cards
 
 function flipCard(card){
-    const cardValue = card.getAttribute('card-value');
+    var cardValue = card.getAttribute('card-value');
     card.src = "./assets/images/"+gameArray[cardValue];
 }
+// ------------------------------------------------------------- Function for turning back over unmatched cards
 
 function unFlipCard(card){
     card.src = "./assets/images/card-rear/card-rear-image.jpg";
 }
+// -----------------------------------------------------------------Function for matching cards
 
 function cardIsMatched(card){
     return card.classList.contains('matched');
 }
+
+//--------------------------------------------------------------- Function for main game mechanics
 
 function selectCard(playingCard, info){
     if ((gameLock == false) && (cardIsMatched(info)== false)){
@@ -122,7 +107,7 @@ function selectCard(playingCard, info){
                 setInterval(function () {
                 if (pairCounter == 10){
                     messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
-                    playAgain()
+                    playAgain();
                 }
                    }, 1500); 
                 gameLock = false;
@@ -137,19 +122,12 @@ function selectCard(playingCard, info){
                     firstFippledCard = null;
                     secondFippledCard = null;
                 }, 2000);
-            }
-            
+            }   
         }
     }
 }
 
-// -------------------------------------------------------- Function for keeping matched cards turned over
-function checkimages(values){
-    var values = document.getElementById(values).src ;
-    return values;
-}
-
-// --------------------------------------------------------- Function for cards turning back over if not a match
+// --------------------------------------------------------- Function for hiding cards
 function hideCard(){
     for(var i=0;i<2;i++){
         var hideId = cardFlipped.pop();
@@ -196,3 +174,4 @@ function navToggle() {
         x.className = "topnav";
     }
 }
+

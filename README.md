@@ -29,6 +29,7 @@ I created this website using three languages:
 [HTML Checker]()  
 [CSS Checker]()  
 [JSHint]()  
+[Responsinator]()  
 Above are links to my website and links to pages that have checked my code for any possible errors or issues, the results for each check are in the links.
 
 # The Build
@@ -52,7 +53,7 @@ Cards to stay turned over if they match
 
 
  # Responsive
-
+Responsiveness is something that I struggle with a little bit as I find it a little overwhelming, the sheer quantity of screen sizes. So I followed [Responsinator](https://www.responsinator.com/) as I find their website very user friendly. I believe that the game works well across most devices, there are a couple of device sizes that have an uneven amount of cards in the last row, but apart from that I don't believe there are any major problems with how responsive the website is, and any issues that are there don't seem to get in the way of the gameplay.  
 
 # Functionality
 The functionality was by far the most difficult thing about this project. There was a lot of writing and re writing, but overall I am fairly pleased with how it turned out. The specific thing that I found most difficult was actually my own coding! It wasn't until I started bug fixing the game that I noticed I couldn't understand a lot of my own code! This was due to poor naming of functions. So with a little guidance from my mentor I was able to refactor the code and make it waaaaay more readable than it was. So it tought me a very important lesson.  ALWAYS WRITE CLEAR CODE :)  
@@ -67,13 +68,14 @@ There were a fair few websites that I used during the creating of this website t
 [freepngimg](https://www.freepngimg.com/)  
 [Wikipedia](https://www.wikipedia.org/)  
 [Balsamiq](https://balsamiq.com/)  
-[Slack Overflow](https://stackoverflow.com/)
+[Slack Overflow](https://stackoverflow.com/)  
 [JSHint](https://jshint.com/)
 [w3](https://www.w3schools.com/)  
+[Responsinator](https://www.responsinator.com/)  
 
 
 # Issues  
 I encountered many issues while making this game, most of them I was able to fix or find a way around, others I received a little help with. Unfortunately there is one issue that I wasn't able to solve. It is a big of a game breaking bug and I will be fixing it in the near future. There is a bug when turning over a card, if you click on the same card twice the game will consider it a match. I believe it is because the game can not tell the difference between a match and the same card being chosen twice. I think that the issue lies within the firstCardFlipped function. But I was unable to narrow it down any further with the time I had remaining.  
-There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  
+There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  There was also an issue with the hamburger icon, when it is pressed it moves down to the bottom right of the screen, I tried to fix it but could not figure out where I went wrong. I will fix it in a later update, but for now I have left it as it doesn't interfere with the gameplay.
 I would also like to give a special thanks to my mentor Antonio Rodriguez as has been an incredible help to me and gone above and beyond to help me understand issues and explaining things to me in such a way that make perfect sense. Truly the best mentor!
 

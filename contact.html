@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +12,12 @@
     <title>Match-Emon: Contact</title>
 </head>
 <body>
-    
     <div class="topnav" id="TopNav">
         <a href="/index.html" class="active">Match-Emon</a>
         <a href="/contact.html">Contact Page</a>
         <a href="/index.html">Home</a>
         <a href="javascript:void(0);" id="icon" onclick="navToggle()"><i class="fa fa-bars"></i></a>
     </div>
-    
     <div class="form-container">
         <h2 class="question-title">Have A Question Or Query</h2>
         <h3 class="question-title">Get In Touch!</h3>
@@ -36,15 +33,11 @@
             <label for="message">Message: </label>
             <textarea required="True" name="message" id="message" cols="30" rows="10" placeholder="Your Message Goes Here..."></textarea>
 
-
             <input id="contact-button" type="button" onclick="sendmessage()" value="submit">
         </form>
-
     </div>
-
     
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
     emailjs.init("user_HQmS8u0JRoHbxdsraJ3sJ");
