@@ -178,3 +178,25 @@ function navToggle() {
     }
 }
 
+(function() {
+    emailjs.init("user_HQmS8u0JRoHbxdsraJ3sJ");
+})();
+
+function sendmessage() {
+    let fullname = document.getElementById("name").value;
+    let useremail = document.getElementById("email").value;
+    let usermessage = document.getElementById("message").value;
+
+        var contactParams = {
+            from_name: fullname,
+            from_email: useremail,
+            message: usermessage,
+        };
+
+        emailjs.send('service_f0oozkd', 'template_0f8b06b', contactParams).then(function() {
+            console.log("Message Sent!");
+            document.getElementById('message_feedback').classList.remove('hide');
+        }, function(error) {
+            console.log("Something Went Wrong!", error);
+        });
+}

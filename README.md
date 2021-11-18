@@ -9,7 +9,7 @@
 
 1. [Overview](#overview)
 2. [Links](#links)
-3. [The Build](#build)
+3. [Build](#build)
 4. [Responsive](#Responsive)
 5. [Functionality](#functionality)
 6. [Styles](#styles)
@@ -33,7 +33,7 @@ I created this website using three languages:
 [Responsinator](https://www.responsinator.com/?url=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2Findex.html)  
 Above are links to my website and links to pages that have checked my code for any possible errors or issues, the results for each check are in the links.
 
-# The Build
+# Build
 The build was a challenge as I wasn't very confident with javascript and although the game is not without flaws i believe that it is pretty good for a novice such as myself. <br> I went in several different directions during the build process, so there are several fairly large changes from the initial idea to the final line. <br> To begin with I created a start button and used javascript to get it functional, I felt it was the best place to start  
 <img src="./assets/images/readme-images/start-button-test.png" alt="Image of start button working">  
 It took me a while to get used to writing javascript so I decided to take it very slow and try to log everything as I went along in the console just to keep me on track. I then created several tests as I went along for various aspects of the foundation of the project.  <br>
