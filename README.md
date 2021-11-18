@@ -27,10 +27,10 @@ I created this website using three languages:
 
 # Links
 [Link To Match-Emon](https://benjamin-joe.github.io/match.emon/)  
-[HTML Checker]()  
-[CSS Checker]()  
+[HTML Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2F)  
+[CSS Checker](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#warnings)  
 [JSHint]()  
-[Responsinator]()  
+[Responsinator](https://www.responsinator.com/?url=https%3A%2F%2F8000-amaranth-xerinae-s1tkbsxl.ws-eu18.gitpod.io%2Findex.html)  
 Above are links to my website and links to pages that have checked my code for any possible errors or issues, the results for each check are in the links.
 
 # The Build
@@ -58,7 +58,9 @@ Responsiveness is something that I struggle with a little bit as I find it a lit
 
 # Functionality
 The functionality was by far the most difficult thing about this project. There was a lot of writing and re writing, but overall I am fairly pleased with how it turned out. The specific thing that I found most difficult was actually my own coding! It wasn't until I started bug fixing the game that I noticed I couldn't understand a lot of my own code! This was due to poor naming of functions. So with a little guidance from my mentor I was able to refactor the code and make it waaaaay more readable than it was. So it tought me a very important lesson.  ALWAYS WRITE CLEAR CODE :)  
-The one thing I was a little disappointed in was that I wasn't able to add a countdown function to the game to add some pressure to the users. Although I initially wrote a timer into the game, I decided to remove it as I was having a hard time with the game functionality and decided it was best to lose a small function and instead focus on getting the game as a whole working as best as I could
+The one thing I was a little disappointed in was that I wasn't able to add a countdown function to the game to add some pressure to the users. Although I initially wrote a timer into the game, I decided to remove it as I was having a hard time with the game functionality and decided it was best to lose a small function and instead focus on getting the game as a whole working as best as I could  
+Here is an image of a lighthouse check I ran on the project, The score was originally only 65 for performance, but I managed to get it up by reducing the size of the background image. I could have reduced it further, but then I felt I was sacrificing the quality of the image  
+<img src="./assets/images/readme-images/lighthouse.png" alt="Lighthouse test image">
  
 # Styles
 Choosing a style for the website proved tricky as i'm quite indecisive on a good day! But I ended up choosing a minimalist view because I didn't want to users to have a sensory overload upon arrival, also slightly due to time constraints.I think that choosing black for the navbar and white for the navbar text really stands out nicely. Also the hover effect creates a subtle enlargment of the links. On smaller screens (below 600px) the navbar will turn into a hamburger icon with the main title still in view, this looks quite sleek and provides good user experience for those on mobile devices. The contact page also stands out subtly with the border effect around the contact form.     
@@ -79,14 +81,9 @@ I also want to give credit to the following for the images used in this project:
 [Brett Croft](https://freepngimg.com/author/brettcrof-391)  
 [Hannah Hill](https://freepngimg.com/author/hannahhil-5479)  
 
-
-
-
 # Issues  
 I encountered many issues while making this game, most of them I was able to fix or find a way around, others I received a little help with. Unfortunately there is one issue that I wasn't able to solve. It is a big of a game breaking bug and I will be fixing it in the near future. There is a bug when turning over a card, if you click on the same card twice the game will consider it a match. I believe it is because the game can not tell the difference between a match and the same card being chosen twice. I think that the issue lies within the firstCardFlipped function. But I was unable to narrow it down any further with the time I had remaining.  
 There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  There was also an issue with the hamburger icon, when it is pressed it moves down to the bottom right of the screen, I tried to fix it but could not figure out where I went wrong. I will fix it in a later update, but for now I have left it as it doesn't interfere with the gameplay.
 I would also like to give a special thanks to my mentor Antonio Rodriguez as has been an incredible help to me and gone above and beyond to help me understand issues and explaining things to me in such a way that make perfect sense. Truly the best mentor!
 
 # Deployment  
-Deploying this project was very easy, I went to the github repo containing this project it's named match.emon. I went to settings, selected source section dropdown menu and selected the main branch. The I received the link for the live site  
- [Match-Emon](https://benjamin-joe.github.io/match.emon/)

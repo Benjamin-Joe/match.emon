@@ -37,11 +37,10 @@ function startGame(){
 
 function playAgain(){
     beginButton.style.display='block';
-    cardArray();
-    gameBoard.innerHTML = "";
-    board();
     moveCounter = 0;
     pairCounter = 0;
+    gameBoard.innerHTML = "";
+    board();
 
     
 }
