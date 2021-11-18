@@ -46,7 +46,7 @@ function startGame(){
         gameArray = gameImages.concat(gameImages);
         shuffle(gameArray);
         board();
-        messages.innerHTML = "Chose A Card"
+        messages.innerHTML = "Choose A Card"
     }
 }
 
@@ -56,7 +56,7 @@ function playAgain(){
     beginButton.style.display='block';
     messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
     board()
-    cardArray()
+    
 }
 
 // ------------------------------------------------------------- Building the game board
