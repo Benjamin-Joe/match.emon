@@ -38,6 +38,7 @@ beginButton.addEventListener('click', startGame);
 // --------------------------------------------------------------------- Start function
 
 function startGame(){
+    gameLock = false;
     beginButton.style.display='none';
     if(!playGame){
         playGame = true;
@@ -49,7 +50,17 @@ function startGame(){
     }
 }
 
+// ------------------------------------------------------------- Play again function
+
+function playAgain(){
+    beginButton.style.display='block';
+    messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
+    board()
+    cardArray()
+}
+
 // ------------------------------------------------------------- Building the game board
+
 
 function board(){
     for (var i = 0; i <= (gameArray.length -1); i++){
@@ -61,12 +72,6 @@ function board(){
 
 // Game Over win/lose
 
-function gameOver(){
-    beginButton.style.display = 'block';
-    messages.innerHTML = "You Completed It In ...... Turns Click to play again"
-    playGame = false;
-    gameArray = []
-}
 // -------------------------------------------------- Selecting cards and checking if cards match or not
 
 function checkForMatch(firstCard, secondCard){
@@ -97,6 +102,7 @@ function selectCard(playingCard, info){
     if ((gameLock == false) && (cardIsMatched(info)== false)){
         gameLock = true;
         moveCounter = moveCounter + 1;
+
         moves.innerText = 'Moves: ' +  moveCounter.toString();
         if (firstFippledCard==null){
             firstFippledCard = info;
@@ -113,6 +119,12 @@ function selectCard(playingCard, info){
                 messages.innerHTML = "Yaay It's A Match";
                 firstFippledCard.classList.add('matched');
                 secondFippledCard.classList.add('matched');
+                // Game finished
+                setInterval(function () {
+                if (pairCounter == 10){
+                    playAgain()
+                }
+                   }, 1500); 
                 gameLock = false;
                 firstFippledCard = null;
                 secondFippledCard = null;
@@ -129,46 +141,6 @@ function selectCard(playingCard, info){
             
         }
     }
-
-
-    
-    //  // Check if card is already flipped
-    //  if(!insideArray(info.id, cardFlipped)){
-    //  }else{
-    //      console.log(' Is already picked ');
-    //  }
-    //  if(isCardFlipped >= 0){
-    //    // Flipping second card
-    //     if(playingCard != isCardFlipped && !gameLock){
-    //         info.src = "./assets/images/"+gameArray[playingCard];
-    //         cardFlipped.push(info.id);
-    //         var playingCard = playingCard;
-    //         gameLock = true;
-    //         if(checkimages(cardFlipped[cardFlipped.length-1]) == checkimages(cardFlipped[cardFlipped.length-2])){
-    //             //Does Match
-    //             pairCounter = pairCounter + 1;
-    //             messages.innerHTML = "Yaay It's A Match"
-    //             gameLock = false;
-    //             isCardFlipped = -1;
-    //             setInterval(function () {
-    //                 if (pairCounter == 10){
-    //                     alert("Game over, you win with " + moveCounter.toString() + " moves");
-    //                 }
-    //             }, 1500); 
-                
-    //         }else {
-    //             // Doesn't match
-    //             messages.innerHTML = "Not A Match Pick Again"
-    //             cardTimer = setInterval(hideCard, 3000);
-    //         }
-    //     }
-    // }else{
-    //     // Flipping first card
-    //     isCardFlipped = playingCard;
-    //     info.src = "./assets/images/"+gameArray[playingCard];
-    //     cardFlipped.push(info.id);
-    // }
-
 }
 
 // -------------------------------------------------------- Function for keeping matched cards turned over
