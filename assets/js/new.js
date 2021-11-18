@@ -54,7 +54,7 @@ function startGame(){
 
 function playAgain(){
     beginButton.style.display='block';
-    messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
+ 
     board()
     
 }
@@ -116,12 +116,12 @@ function selectCard(playingCard, info){
             console.log('I played ' + secondFippledCard.getAttribute('card-value'));
             if (checkForMatch(firstFippledCard, secondFippledCard)){
                 pairCounter = pairCounter + 1;
-                messages.innerHTML = "Yaay It's A Match";
                 firstFippledCard.classList.add('matched');
                 secondFippledCard.classList.add('matched');
                 // Game finished
                 setInterval(function () {
                 if (pairCounter == 10){
+                    messages.innerHTML = ("Game Finished, You Did It In " + moveCounter.toString() + " Moves. Go Again And Improve Your Score!");
                     playAgain()
                 }
                    }, 1500); 

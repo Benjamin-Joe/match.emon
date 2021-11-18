@@ -10,7 +10,7 @@
 1. [Overview](#overview)
 2. [Links](#links)
 3. [The Build](#build)
-4. [Wireframes](#wireframes)
+4. [Responsive](#Responsive)
 5. [Functionality](#functionality)
 6. [Styles](#styles)
 7. [Sources](#sources)
@@ -51,15 +51,17 @@ Cards to stay turned over if they match
 <img src="./assets/images/readme-images/matches-stay-over.png" alt="Showing initial matching card ability">  
 
 
- # Wireframes
-Creating wireframes is a very important step as is helps me to create a visual representation of where I am aiming to go. This allows me to stay focused on the task ahead and not get sidetracked on the smaller things.  
+ # Responsive
+
 
 # Functionality
 The functionality was by far the most difficult thing about this project. There was a lot of writing and re writing, but overall I am fairly pleased with how it turned out. The specific thing that I found most difficult was actually my own coding! It wasn't until I started bug fixing the game that I noticed I couldn't understand a lot of my own code! This was due to poor naming of functions. So with a little guidance from my mentor I was able to refactor the code and make it waaaaay more readable than it was. So it tought me a very important lesson.  ALWAYS WRITE CLEAR CODE :)  
+The one thing I was a little disappointed in was that I wasn't able to add a countdown function to the game to add some pressure to the users. Although I initially wrote a timer into the game, I decided to remove it as I was having a hard time with the game functionality and decided it was best to lose a small function and instead focus on getting the game as a whole working as best as I could
  
 # Styles
 Choosing a style for the website proved tricky as i'm quite indecisive on a good day! But I ended up choosing a minimalist view because I didn't want to users to have a sensory overload upon arrival, also slightly due to time constraints.I think that choosing black for the navbar and white for the navbar text really stands out nicely. Also the hover effect creates a subtle enlargment of the links. On smaller screens (below 600px) the navbar will turn into a hamburger icon with the main title still in view, this looks quite sleek and provides good user experience for those on mobile devices. The contact page also stands out subtly with the border effect around the contact form.     
-The overall look of the rest of the website looks fairly plain, but with just a tiny amount of color so it doesn't look dull. I will definitely tweak the look of the website as time goes on and I learn more about coding.    
+The overall look of the rest of the website looks fairly plain, but with just a tiny amount of color so it doesn't look dull. I will definitely tweak the look of the website as time goes on and I learn more about coding.   
+
 # Sources
 There were a fair few websites that I used during the creating of this website they are as follows:  
 [freepngimg](https://www.freepngimg.com/)  
@@ -67,5 +69,11 @@ There were a fair few websites that I used during the creating of this website t
 [Balsamiq](https://balsamiq.com/)  
 [Slack Overflow](https://stackoverflow.com/)
 [JSHint](https://jshint.com/)
-# Issues
+[w3](https://www.w3schools.com/)  
+
+
+# Issues  
+I encountered many issues while making this game, most of them I was able to fix or find a way around, others I received a little help with. Unfortunately there is one issue that I wasn't able to solve. It is a big of a game breaking bug and I will be fixing it in the near future. There is a bug when turning over a card, if you click on the same card twice the game will consider it a match. I believe it is because the game can not tell the difference between a match and the same card being chosen twice. I think that the issue lies within the firstCardFlipped function. But I was unable to narrow it down any further with the time I had remaining.  
+There were other issues that I did overcome, such as an issue preventing matches from staying turned over and the end of game functionality was not working at all. So i decided that those bugs were more important than the one I couldn't get round to.  One other thing that I had to cut out were the wireframes as I felt that they was too big of a difference between the wireframes I created at the start of the project and the actual project I ended up with.  
+I would also like to give a special thanks to my mentor Antonio Rodriguez as has been an incredible help to me and gone above and beyond to help me understand issues and explaining things to me in such a way that make perfect sense. Truly the best mentor!
 
