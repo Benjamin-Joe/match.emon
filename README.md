@@ -71,7 +71,14 @@ There were a fair few websites that I used during the creating of this website t
 [Slack Overflow](https://stackoverflow.com/)  
 [JSHint](https://jshint.com/)
 [w3](https://www.w3schools.com/)  
-[Responsinator](https://www.responsinator.com/) 
+[Responsinator](https://www.responsinator.com/)  
+I also want to give credit to the following for the images used in this project:  
+[Alexis Bailey](https://freepngimg.com/author/alexisbai-5859)  
+[Lydia Simmons](https://freepngimg.com/author/lydiasimm-7560)  
+[Brett Croft](https://freepngimg.com/author/brettcrof-391)  
+[Hannah Hill](https://freepngimg.com/author/hannahhil-5479)  
+
+
 
 
 # Issues  

@@ -176,11 +176,18 @@
         width: 720px;
     }
 
+    .game-rules {
+        margin-top: 45px;
+    }
+
 }
 
 @media screen and (max-width: 668px) {
     #game-grid {
         width: 600px;
+    }
+    .game-rules {
+        margin-top: 55px;
     }
 
 
