@@ -29,7 +29,7 @@ function startGame(){
         gameArray = gameImages.concat(gameImages);
         shuffle(gameArray);
         board();
-        messages.innerHTML = "Choose A Card";
+        messages.innerHTML = "Good Luck, The Lower The Score The Better :)";
     }
 }
 
@@ -37,8 +37,12 @@ function startGame(){
 
 function playAgain(){
     beginButton.style.display='block';
- 
+    cardArray();
+    gameBoard.innerHTML = "";
     board();
+    moveCounter = 0;
+    pairCounter = 0;
+
     
 }
 // ------------------------------------------------------------------- Building the game board
@@ -126,6 +130,11 @@ function selectCard(playingCard, info){
         }
     }
 }
+
+//---------------------------------------------------------- Adding timer to messages
+setTimeout(function() {
+    $('#messages');
+}, 3000);
 
 // --------------------------------------------------------- Function for hiding cards
 function hideCard(){
