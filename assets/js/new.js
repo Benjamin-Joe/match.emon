@@ -131,11 +131,6 @@ function selectCard(playingCard, info){
     }
 }
 
-//---------------------------------------------------------- Adding timer to messages
-setTimeout(function() {
-    $('#messages');
-}, 3000);
-
 // --------------------------------------------------------- Function for hiding cards
 function hideCard(){
     for(var i=0;i<2;i++){
